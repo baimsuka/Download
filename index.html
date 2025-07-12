@@ -1,23 +1,62 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Zona Download Mod</title>
+  <meta charset="UTF-8" />
+  <title>File Anda Siap Diunduh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
-    a.button {
-      padding: 12px 24px;
-      background: #4CAF50;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px 25px;
+      max-width: 400px;
+      width: 100%;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+    .button {
+      padding: 14px 28px;
+      background-color: #2196F3;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
       font-size: 18px;
+      border: none;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <h1>Download Mod Minecraft</h1>
-  <p>Download file eksklusif hanya untuk komunitas!</p>
-  <a class="button" href="login.html">Download Sekarang</a>
+  <div class="container">
+    <h2>File Anda Siap Diunduh!</h2>
+    <p>Silakan klik tombol di bawah untuk mengunduh.</p>
+    <a class="button" href="login.html">Download Sekarang</a>
+  </div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("verified") === "true") {
+    const button = document.querySelector("a.button");
+    button.href = "https://www.mediafire.com/file/012yat9j2inudk5/V4_FREE_PROXCRYPT_MOD_BS.zip/file";
+    button.textContent = "Download dari Mediafire";
+  }
+</script>
+
 </body>
 </html>
